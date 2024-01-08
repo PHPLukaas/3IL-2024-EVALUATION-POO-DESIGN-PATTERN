@@ -1,14 +1,21 @@
 package app.Personne;
 
+import app.Choix.Choosable;
 import app.Reservation.Reservation;
 
-public class Responsable extends Personne {
+import java.util.ArrayList;
+import java.util.List;
 
-        private Reservation reservation;
+public class Responsable extends Personne {
+        private List<Reservation> reservations;
 
         public Responsable() {
             super();
             // Par defaut, un responsable n'a pas de réservation
-            this.reservation = null;
+            this.reservations = new ArrayList<Reservation>();
         }
+
+    public void setReservation(Reservation reservation) {
+        this.reservations.add(reservation);
+    }
 }

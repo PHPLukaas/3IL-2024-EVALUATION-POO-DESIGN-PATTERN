@@ -6,7 +6,7 @@ import java.util.List;
 import app.Choix.Choosable;
 import app.Reservation.Reservation;
 
-public class Client extends Personne implements Choosable {
+public class Client extends Personne {
 
     private List<Reservation> reservations;
 
@@ -14,12 +14,9 @@ public class Client extends Personne implements Choosable {
         super();
         // Par defaut, un client n'a pas de réservation
         this.reservations = new ArrayList<Reservation>();
-
     }
 
-
-    @Override
-    public String describe() {
-        return this.getNom() + " " + this.getPrenom();
+    public void setReservation(Reservation reservation) {
+        this.reservations.add(reservation);
     }
 }

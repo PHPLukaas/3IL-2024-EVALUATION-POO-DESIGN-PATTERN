@@ -76,4 +76,9 @@ public class Voiture implements Choosable{
         return "Voiture " + this.getMarque() + " " + this.getModele() + " " + this.getKilometrage() + "km " + this.getPrixLocation() + "€/jour";
     }
 
+    @Override
+    public String describe(String date) {
+        return "Voiture " + this.getMarque() + " " + this.getModele() + " " + this.getKilometrage() + "km " + this.getPrixLocation() + "€/jour " + this.getResaForDate(date);
+    }
+
 }

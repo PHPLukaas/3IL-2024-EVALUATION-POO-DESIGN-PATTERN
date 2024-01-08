@@ -28,4 +28,9 @@ public class Personne implements Choosable {
     public String describe() {
         return this.getNom() + " " + this.getPrenom();
     }
+
+    @Override
+    public String describe(String date) {
+        return null;
+    }
 }

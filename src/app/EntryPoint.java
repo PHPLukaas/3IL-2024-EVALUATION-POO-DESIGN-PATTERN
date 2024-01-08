@@ -20,6 +20,9 @@ public class EntryPoint {
     public static void main(String[] args) {
         // configurez ici votre école :
         // - Instantiation de vos voitures, clients, responsables...
+
+        Entreprise entreprise = Entreprise.getInstance();
+
         Client client1 = new Client();
         Client client2 = new Client();
         Client client3 = new Client();
@@ -48,7 +51,7 @@ public class EntryPoint {
 
         // - Le programme est déjà pré écrit, il ne reste qu'à compléter les TODO
 
-        System.out.println("/_\\ Bienvenue sur LocaLux car manager!");
+        System.out.println("/_\\ Bienvenue sur " + entreprise.getNom() + " car manager!");
 
         // la app.Console permet de faciliter la récupération d'une saisie de l'utilisateur dans la console
         Console console = new Console();
@@ -104,7 +107,7 @@ public class EntryPoint {
         String date = console.captureString();
 
         Choix<Voiture> choix = new Choix<>();
-        Voiture voiture = choix.choice(voitures, "Quelle voiture souhaitez vous réserver ?");
+        Voiture voiture = choix.choice(voitures, "Quelle voiture souhaitez vous réserver ?", date);
 
         // On vérifie que la voiture n'est pas déjà réservée pour la date
         if (!voiture.isAvailable(date)) {

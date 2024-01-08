@@ -19,6 +19,8 @@ public class Reservation {
         this.client = client;
         this.voiture = voiture;
         this.voiture.setReservation(this);
+        this.responsable.setReservation(this);
+        this.client.setReservation(this);
     }
 
     public Responsable getResponsable() {
