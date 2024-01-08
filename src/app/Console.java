@@ -1,3 +1,5 @@
+package app;
+
 import java.util.Scanner;
 
 /**
@@ -5,8 +7,8 @@ import java.util.Scanner;
  * Lisez la doc et enjoy :-)
  * <p>
  * Utilisation :
- * Créez un objet de la classe Console :
- * Console maConsole = new Console();
+ * Créez un objet de la classe app.Console :
+ * app.Console maConsole = new app.Console();
  * <p>
  * Ensuite pour récupérer une valeur entière entre 1 et 10 :
  * int maValeur = maConsole.captureInt(1, 10);
@@ -26,7 +28,7 @@ public class Console {
      *
      * Utilisation pour un nombre entre 3 et 5
      *
-     * Console maConsole = new Console();
+     * app.Console maConsole = new app.Console();
      * int maValeur = maConsole.captureInt(3, 5);
      *
      * @param min la borne minimale (inclue)
@@ -61,7 +63,7 @@ public class Console {
      * Attends une saisie utilisateur non vide
      *
      * Utilisation :
-     * Console maConsole = new Console();
+     * app.Console maConsole = new app.Console();
      * String maValeur = maConsole.captureString();
      *
      * @return retourne la chaine de caractères saisie par l'utilisateur
